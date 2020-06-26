@@ -11,13 +11,14 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
+
+- task: NuGetCommand@2
+
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'config'
+    nugetConfigPath: '.'
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
-# - task: NuGetCommand@2
-
-#   inputs:
-#     command: 'restore'
-#     restoreSolution: '**/*.sln'
-#     feedsToUse: 'config'
-#     nugetConfigPath: '.'
