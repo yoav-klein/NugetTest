@@ -18,6 +18,7 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     
+- powershell: 'gci -Recurse'
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
