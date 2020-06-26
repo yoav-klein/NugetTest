@@ -18,7 +18,7 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'config'
-    nugetConfigPath: 'Nuget'
+    nugetConfigPath: 'Nuget/nuget.config'
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
